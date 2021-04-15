@@ -12,12 +12,13 @@ import {
     NavBtnLink
 } from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (
         <>
+            <Nav>
             <NavbarContainer>
                 <NavLogo to='/'>Enrique</NavLogo>
-                <MobileIcon>
+                <MobileIcon onClick={toggle}>
                     <FaBars/>
                 </MobileIcon>
                 <NavMenu>
@@ -38,6 +39,7 @@ const Navbar = () => {
                     <NavBtnLink to='/signin'>Sign In</NavBtnLink>
                 </NavBtn>
             </NavbarContainer>
+            </Nav>
         </>
     );
 }
